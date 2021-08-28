@@ -1,39 +1,24 @@
-#a = int(input())
+#i = 1
+#while i < 5:
+ #   print("hi", i)
+  #  i = i + 1
 
-#a = (a % 2)
 
-#if a == 0:
- #   print("even")
+#i = 1
+#while i < 8:
+#    print(i * "*")
+#    i = i + 1
+for i in range(1, 100):
+     a = i % 10
+     b = i // 10
+     first_if = a != 0 and a % 3 == 0
+     second_if = b % 3 == 0 and b != 0
 
-#else:
-#  print("odd")
+     if first_if and second_if:
+         print("**")
+     elif first_if or second_if:
+         print("*")
+     else:
+         print(i)
 
-#---------------------------
 
-#for i in range(1, 11):
-#    print("*" * i)
-
-#a = int(input())
-#count = 0
-#or i in range(2, a):
-#    if a % i == 0:
- #       count += 1
-#if count == 0:
-#    print("prime")
-#else:
-#    print("not prime")
-
-import random
-a = []
-for i in range(10):
-    b = random.randrange(10)
-    a.append(b)
-
-print(a)
-
-max_valve = a[0]
-for i in range(len(a)):
-    if max_valve > a [i]:
-        max_valve = a[i]
-
-print(max_valve)
