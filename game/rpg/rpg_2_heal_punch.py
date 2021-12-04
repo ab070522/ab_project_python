@@ -7,7 +7,8 @@ class makeCh():
         self.sword_damage = random.randrange(10, 13)
         self.magic_damage = random.randrange(10, 15)
         self.punch_damage = random.randrange(5, 7)
-
+    
+    #힐
     def heal(self):
         no_play = 0
         if self.mp - 50 >= 0:
@@ -19,6 +20,7 @@ class makeCh():
             no_play = 1
         return self.hp, self.mp, no_play
 
+    #검
     def sword(self):
         critical = random.randrange(10)
         if critical == 0:
@@ -27,6 +29,7 @@ class makeCh():
             sword_damage = self.sword_damage
         return sword_damage
 
+    #펀치
     def punch(self):
         number_of_punch = random.randrange(1, 7)
         damage_punch = self.punch_damage * number_of_punch
