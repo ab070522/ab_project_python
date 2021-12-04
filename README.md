@@ -20,6 +20,7 @@
 
 * 틱택토   
     > 3 x 3 칸 위에 먼저 1줄을 채우는 쪽이 승리합니다.
+    
     > ![캡처](https://user-images.githubusercontent.com/88918803/144695754-c7d24ad1-cadc-467b-b610-59d487096525.PNG)
 
 * 오징어게임 (다리 건너기)   
