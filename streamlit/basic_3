@@ -1,0 +1,7 @@
+f = open("test.txt", 'a')
+
+f.write("sdgsdfg \n")
+f.write("hello\t")
+f.write("ddddd")
+
+f.close()
