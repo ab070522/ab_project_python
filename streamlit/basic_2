@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+import streamlit as st
+
+col1, col2, cold3, = st.beta_columns(3)
+
+with col1:
+    st.header("a cat")
+    st.image("https://static.streamlit.io/examples/cat.img", use_column_width=True)
+
+with col2:
+    st.header("Button")
+    if st.button("Button!!"):
+        st.write("yes")
+
+with cold3:
+    st.header("Chart Data")
+    chart_data = pd.DataFrame(np.random.randn(50, 3), columns=["a", "b", "c"])
+    st.bar_chart(chart_data)
