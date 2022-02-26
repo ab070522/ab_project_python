@@ -1,25 +1,32 @@
 from glob import glob
+def value(all_file):
+    for i in range(int(len(all_file))):
+        f = open('person {} .txt'.format(i + 1), 'r')
+        lines = f.readlines()
+
+        gender = lines[0].split(':')
+        gender_value = gender[1].split('\n')
+        gender_list.append(gender_value[0])
+
+        age = lines[1].split(':')
+        age_value = age[1].split('\n')
+        age_list.append(age_value[0])
+
+        point = lines[2].split(':')
+        point_value = point[1].split('\n')
+        point_list.append(point_value[0])
+
+    return gender_list, age_list, point_list
+
+
 
 all_file = glob("./*.txt")
 gender_list = []
 age_list = []
 point_list = []
 point = 0
-for i in range(int(len(all_file))):
-    f = open('person {} .txt'.format(i+1), 'r')
-    lines = f.readlines()
 
-    gender = lines[0].split(':')
-    gender_value = gender[1].split('\n')
-    gender_list.append(gender_value[0])
-
-    age = lines[1].split(':')
-    age_value = age[1].split('\n')
-    age_list.append(age_value[0])
-
-    point = lines[2].split(':')
-    point_value = point[1].split('\n')
-    point_list.append(point_value[0])
+value(all_file)
 
 print("gender_list : " , gender_list)
 
