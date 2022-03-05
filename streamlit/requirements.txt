@@ -1,0 +1,2 @@
+streamlit vers : 1.3
+python vers : 3.9
