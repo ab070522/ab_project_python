@@ -50,4 +50,4 @@
     
 <img width="487" alt="gg" src="https://user-images.githubusercontent.com/88918803/156861915-02629bee-0ad6-44af-b3b7-4caca05f8a9f.png">
 
-* 실행법 : streamlit run 
+* 실행법 : streamlit run finall
