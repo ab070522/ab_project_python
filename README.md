@@ -48,4 +48,6 @@
 
 * streamlit 을 이용하여 설문지를 만듬
     
-* 
+<img width="487" alt="gg" src="https://user-images.githubusercontent.com/88918803/156861915-02629bee-0ad6-44af-b3b7-4caca05f8a9f.png">
+
+
