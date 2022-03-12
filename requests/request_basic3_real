@@ -1,0 +1,27 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://poro.gg/champions?format=stats&hl=ko-KR'
+response = requests.get(url)
+
+#200은 성공
+if response.status_code == 200:
+    print("success")
+    source = response.text
+    soup = BeautifulSoup(source, 'html.parser')
+
+    exs = soup.findAll()
+    print("exs", exs)
+
+
+    #findall 은 원하는 찾고자 하는 것을 전체에서 list 형태로 return 한다.
+    ex = soup.findAll("span", {"class":"d-block ellipsis"})
+    #print("ex", ex)
+
+    ch_list = []
+
+    for i in ex:
+
+        print(i.text)
+
+
