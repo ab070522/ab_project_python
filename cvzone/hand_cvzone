@@ -9,7 +9,6 @@ while True:
 
     succwss, img = cap.read()
 
-
     #임이지 좌우 변경
     img = cv2.flip(img, 1)
     hands, img = detector.findHands(img)
@@ -29,7 +28,7 @@ while True:
         else:
             colorR = (255, 0, 255)
 
-    cv2.rectangle(img, (cx -w//2, cy-h//2), (cx  + w //2, cy + h //2), colorR , cv2.FILLED
+    cv2.rectangle(img, (cx -w//2, cy-h//2), (cx  + w //2, cy + h //2), colorR , cv2.FILLED)
     #display
     cv2.imshow("Image", img)
     cv2.waitKey(1)
