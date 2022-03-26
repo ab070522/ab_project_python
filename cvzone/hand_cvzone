@@ -21,7 +21,7 @@ while True:
         centerPoint = hand1['center']
         handType1 = hand1["type"]
         fingers1 = detector.fingersUp(hand1)
-        l, _, _ = detector.findDistance(lmList1[8], lmList1[12], img)
+        l, _, _ = detector.findDistance(lmList1[8][0],lmList1[8][1], lmList1[12][0], lmList1[12][1], img)
         if l < 50:
             if cx -w //2 < bbox1[0] < cx  + w //2 and cy-h//2 < bbox1[1] < cx  + h //2:
                 colorR = 0, 255, 0
