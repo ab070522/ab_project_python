@@ -1,0 +1,22 @@
+n = int(input())
+total = []
+answer = 0
+for i in range(n):
+    k = list(map(int, input().split()))
+    total.append(k)
+for b in range(len(total)):
+    for i in range(len(total)):
+
+        if total[len(total)-i-1][i] + total[len(total)-i][i] > total[len(total)-i-1][i] + total[len(total)-i][i+1]:
+            total[len(total)-1][i] = total[len(total)-i-1][i] + total[len(total)-i][i]
+        else:
+            total[len(total) - 1][i] = total[len(total) - i - 1][i] + total[len(total) - i][i+1]
+print(total[0])
+'''
+5
+7
+3 8
+8 1 0
+2 7 4 4
+4 5 2 6 5
+'''
