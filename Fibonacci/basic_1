@@ -1,0 +1,11 @@
+#파보나치
+# 1, 1, 2, 3, 5, 8, 13, 21, ....
+num = []
+b = 0
+num.append(1)
+num.append(1)
+a = input("꺼낼 번호: ")
+for i in range(int(a)):
+    num.append(num[i] + num[i+1])
+print(num[int(a)-1])
+
