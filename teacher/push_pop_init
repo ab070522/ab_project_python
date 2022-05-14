@@ -1,0 +1,23 @@
+MAX_LEN = 3
+stack = []
+
+def push(stack, data):
+    if len(stack) == MAX_LEN:
+        print("overflow")
+    else:
+        stack.append(data)
+
+        return stack
+
+def pop(stack):
+
+    if len(stack) == 0:
+        print("underflow")
+    else:
+        print(stack[len(stack) - 1])
+        del stack[len(stack) - 1]
+
+    return stack
+
+stack = push(stack, 6)
+pop(stack)
