@@ -1,0 +1,36 @@
+def push(num):
+    if len(push_num) == 3:
+        print("overflow")
+    else:
+        push_num.append(num)
+    return push_num
+
+def pop():
+    if len(push_num)-1 < 0:
+        print("underflow")
+    else:
+        a.append(push_num[len(push_num)-1])
+        push_num.pop(len(push_num)-1)
+    return a
+
+def init():
+    push_num.clear()
+    a.clear()
+
+
+a = []
+push_num = []
+
+push(3)
+push(5)
+push(1)
+push(3)
+
+
+pop()
+pop()
+pop()
+pop()
+print(a)
+
+init()
