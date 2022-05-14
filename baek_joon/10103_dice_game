@@ -1,0 +1,15 @@
+n = int(input())
+chang = 100
+sang = 100
+for i in range(n):
+
+
+    chang_num, sang_num = map(int, input().split())
+
+    if chang_num > sang_num:
+        sang -= chang_num
+    elif chang_num < sang_num:
+        chang -= sang_num
+
+print(chang)
+print(sang)
