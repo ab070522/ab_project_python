@@ -53,9 +53,12 @@ charcter_speed = 0.2
 #-------------------------------------------------------------------------------------------
 
 #하트 불러오기
-heart = pygame.image.load("imgs/heart.png")
+heart_ = pygame.image.load("imgs/heart.png")
 heart_2 = pygame.image.load("imgs/heart.png")
-heart_size = heart.get_rect().size #캐릭터 이미지 사이즈 구하기
+heart_3 = pygame.image.load("imgs/heart.png")
+heart_4 = pygame.image.load("imgs/heart.png")
+heart_5 = pygame.image.load("imgs/heart.png")
+heart_size = heart_.get_rect().size #캐릭터 이미지 사이즈 구하기
 heart_width = heart_size[0] #캐릭터 가로 크기
 heart_height = heart_size[1] #캐릭터 세로 크기
 
@@ -104,8 +107,30 @@ while running:
 
     screen.blit(background, (0, 0)) #배경에 이미지 그려주고 위치 지정
     screen.blit(character, (character_x_pos, character_y_pos)) #배경에 캐릭터 그려주기
-    screen.blit(heart, (heart_width-50, heart_height-50))
+    screen.blit(heart_, (heart_width-50, heart_height-50))
+    screen.blit(heart_2, (heart_width, heart_height - 50))
+    screen.blit(heart_2, (heart_width + 50, heart_height - 50))
+    screen.blit(heart_2, (heart_width + 100, heart_height - 50))
+    screen.blit(heart_2, (heart_width + 150, heart_height - 50))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     pygame.display.update()
+
 
 
 #pygame 종료
