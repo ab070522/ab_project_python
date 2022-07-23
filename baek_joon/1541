@@ -1,0 +1,21 @@
+a = input().split("-")
+b = 0
+c = 0
+d = []
+print(a)
+for i in range(len(a)):
+    if '+' in a[i]:
+        b = (a[i].split('+'))
+        for j in range(len(b)):
+            c += int(b[j])
+    else:
+        c = int(a[i])
+
+    d.append(c)
+    c = 0
+print(d)
+
+answer = d[0]
+for k in range(1, len(d)):
+    answer -= d[k]
+print(answer)
