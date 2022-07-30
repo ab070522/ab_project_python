@@ -1,0 +1,16 @@
+a = 0
+b = 0
+c = 0
+for i in range(1, 101):
+    c += 1
+    if i - b * 10 == 3 or i - b * 10 == 6 or i - b * 10 == 9:
+        a += 1
+    if b == 3 or b == 6 or b == 9:
+        a += 1
+    if i - b * 10 == 9:
+        b += 1
+    if a == 1 or a == 2:
+        print('*' * a)
+        a = 0
+    else:
+        print(c)
