@@ -1,0 +1,11 @@
+Q = int(input("찾고싶은 번호: "))
+
+base = []
+base.append(0)
+base.append(1)
+answer = 0
+
+for i in range(Q):
+    answer = base[i] + base[i+1]
+    base.append(answer)
+print(answer)
