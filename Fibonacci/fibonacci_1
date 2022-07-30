@@ -1,9 +1,11 @@
-a = {}
-temp = "드라마 <이상한 변호사 우영우>에 나와 화제를 모은 경남 창원의 팽나무를 보려는 관광객들의 발길이 이어지고 있다."
+Q = int(input("찾고싶은 번호: "))
 
-for i in range(len(temp)):
-    if temp[i] in a:
-        a[temp[i]] += 1
-    else:
-        a[temp[i]] = 1
-print(a)
+base = []
+base.append(0)
+base.append(1)
+answer = 0
+
+for i in range(Q):
+    answer = base[i] + base[i+1]
+    base.append(answer)
+print(answer)
