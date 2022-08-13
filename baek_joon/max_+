@@ -1,0 +1,14 @@
+n = int(input())
+total_list = list(map(int, input().split()))
+
+
+nu = total_list[0]
+bb = total_list[0]
+
+for i in range(1, n):
+    if nu + total_list[i] >= bb:
+        bb = nu + total_list[i]
+    nu = nu + total_list[i]
+    if nu + total_list[i] < 0:
+        nu = 0
+print(bb)
