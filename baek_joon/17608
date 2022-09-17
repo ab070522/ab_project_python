@@ -1,0 +1,13 @@
+answer = 1
+h = []
+n = int(input())
+for i in range(n):
+    h.append(int(input()))
+
+a = h[n-1]
+for i in range(n):
+    if h[n-1 - i] > a:
+        a = h[len(h) - i]
+        answer += 1
+
+print(answer)
