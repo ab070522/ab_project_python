@@ -1,0 +1,8 @@
+T = int(input())
+v = {0: 1, 1: 1, 2: 1}
+for i in range(T):
+    q = int(input())
+    for j in range(q):
+        v[j + 3] = v[j] + v[j + 1]
+
+    print(v[q - 1])
