@@ -1,0 +1,16 @@
+n, m = map(int, input().split())
+tu = []
+answer = 0
+for i in range(n):
+    tu.append(input())
+
+tuple = tuple(tu)
+
+Q = []
+for i in range(m):
+    Q.append(input())
+
+for i in range(m):
+    if (Q[i] in tuple) == True:
+        answer += 1
+print(answer)
