@@ -1,0 +1,17 @@
+//ARGB 찾기
+#include <stdio.h>
+int main() {
+	int argb = 0xFBFF5BF8;
+	unsigned char a, r, g, b;
+	a = (argb >> 24) & 0x000000FF;
+	r = (argb >> 16) & 0x000000FF;
+	g = (argb >> 8) & 0x000000FF;
+	b = argb & 0x000000FF;
+
+	printf("ARGB = 0x%08x\n", argb);
+	printf("A = 0x%02X(%d)\n", a, a);
+	printf("R = 0x%02X(%d)\n", r, r);
+	printf("G = 0x%02X(%d)\n", g, g);
+	printf("B = 0x%02X(%d)\n", b, b);
+
+}
