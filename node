@@ -40,6 +40,20 @@ class MyList:
 
         result += ">"
         return result
+    
+    # 객체를 iterable 하게 만듬
+    def __iter__(self):
+        def generate():
+            curr = self.head
+            while curr is not None:
+                yield curr.data
+                curr = curr.link
+        return generate()
+    
+    #내장함수 len 호출시 동작 구현
+    def __len__(self):
+        return self.length
 
 My_List = MyList(1, 2, "123")
-print(My_List)
+for item in My_List:
+    print(My_List)
