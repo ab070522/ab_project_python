@@ -1,0 +1,45 @@
+class Node:
+    def __init__(self, data, link=None):
+        self.data = data
+        self.link = link
+
+#node 관리하는 클래스
+class MyList:
+    def __init__(self, *datas):
+        self.length = 0
+        self.head = None
+        self.tail = None
+
+        for data in datas:
+            self.append(data)
+
+    #node를 생성하여 연결
+    def append(self, data):
+        node = Node(data)
+
+        if self.head is None:
+            self.head = node
+            self.tail = node
+        #저장된 데이터가 있는 경우
+        else:
+            self.tail.link = node
+            self.tail = node
+
+        self.length += 1
+
+    #예쁘게 만들기
+    def __str__(self):
+        result = "<"
+        curr = self.head
+
+        while curr is not None:
+            result += str(curr.data)
+            if curr.link is not None:
+                result += ", "
+            curr = curr.link
+
+        result += ">"
+        return result
+
+My_List = MyList(1, 2, "123")
+print(My_List)
