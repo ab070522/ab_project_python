@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현재 시각을 콘솔에 표시</title>
+</head>
+<body>
+    <script>
+        //별로 안씀
+        function displayTime() {
+            //Data 생성자를 통해 현재시각불러오기
+            let data = new Date();
+            console.log(`현재 시각은 ${data}입니다`);
+        }
+    </script>
+
+    <button onclick="displayTime()">현재 시각 알아보기</button>
+</body>
+</html>
